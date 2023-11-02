@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import LoginView from "@/views/LoginView.vue";
+import AdminView from "@/views/AdminView.vue";
 
 Vue.use(VueRouter)
 
@@ -11,9 +13,14 @@ const routes = [
     component: HomeView
   },
   {
+    path: '/login',
+    name: 'login',
+    component: LoginView
+  },
+  {
     path: '/admin',
     name: 'about',
-    component: () => import('../views/AdminView.vue')
+    component: AdminView
   }
 ]
 
